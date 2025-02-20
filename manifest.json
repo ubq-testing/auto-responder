@@ -8,16 +8,13 @@
     "properties": {
       "automatedResponses": {
         "type": "object",
-        "default": {
-          "auto-responder": "Hello! Thanks for your comment."
-        },
-        "properties": {
-          "type": "object",
-          "additionalProperties": {
+        "patternProperties": {
+          "^(.*)$": {
             "type": "string"
           }
         }
       }
-    }
+    },
+    "required": ["automatedResponses"]
   }
 }
